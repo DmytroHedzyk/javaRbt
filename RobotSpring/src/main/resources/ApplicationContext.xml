@@ -5,9 +5,10 @@
 
 
 	<bean id="t1000" class="ru.javabegin.training.spring.impls.robot.ModelT1000">
-		<constructor-arg ref="sonyHand"/>
-		<constructor-arg ref="sonyLeg"/>
-		<constructor-arg ref="sonyHead"/>
+		<constructor-arg value="true" index="2"/>
+		<constructor-arg value="silver" index="0"/>
+		<constructor-arg value="2006" index="1"/>
+
 
 		<property name="hand" ref="toshibaHand"/>
 		<property name="leg" ref="toshibaLeg"/>
