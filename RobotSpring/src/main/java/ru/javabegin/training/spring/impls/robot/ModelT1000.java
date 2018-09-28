@@ -103,4 +103,12 @@ public class ModelT1000 implements Robot {
 	public void setHead(Head head) {
 		this.head = head;
 	}
+
+	public void initObject(){
+		System.out.println("Object " + this.toString() + " initialized.");
+	}
+
+	public void destroyObject(){
+		System.out.println("Object " + this.toString() + " destroyed.");
+	}
 }

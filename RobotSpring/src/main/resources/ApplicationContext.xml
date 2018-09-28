@@ -7,7 +7,8 @@
 
 
 	<bean id="t1000" class="ru.javabegin.training.spring.impls.robot.ModelT1000"
-		  p:hand-ref="toshibaHand" p:leg-ref="sonyLeg" p:head-ref="toshibaHead">
+		  p:hand-ref="toshibaHand" p:leg-ref="sonyLeg" p:head-ref="toshibaHead"
+		  init-method="initObject" destroy-method="destroyObject">
 
 		<constructor-arg value="silver" index="0" type="java.lang.String"/>
 		<constructor-arg value="2006" index="1" type="int"/>
