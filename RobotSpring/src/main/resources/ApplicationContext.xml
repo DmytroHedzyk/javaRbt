@@ -19,7 +19,7 @@
 		<property name="head" ref="toshibaHead"/>-->
 	</bean>
 
-	<bean id="t1000Empty" class="ru.javabegin.training.spring.impls.robot.ModelT1000">
+	<bean id="t1000Empty" class="ru.javabegin.training.spring.impls.robot.ModelT1000" scope="prototype">
 		<constructor-arg ref="sonyHand" />
 		<constructor-arg ref="sonyLeg" />
 		<constructor-arg ref="sonyHead" />
