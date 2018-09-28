@@ -23,5 +23,10 @@ public class Start {
 
 		ModelT1000 t1000C2 = (ModelT1000) context.getBean("t1000C2");
 		t1000C2.action();
+
+		ModelT1000  t1000Empty2 = (ModelT1000) context.getBean("t1000Empty");
+
+        System.out.println(t1000Empty);
+        System.out.println(t1000Empty2);
 	}
 }
