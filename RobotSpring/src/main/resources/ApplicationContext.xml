@@ -27,6 +27,7 @@
 		<constructor-arg ref="sonyHead" />
 	</bean>
 
+
 	<bean id="t1000C" class="ru.javabegin.training.spring.impls.robot.ModelT1000"
 		  c:hand-ref="sonyHand"  c:leg-ref="sonyLeg" c:head-ref="sonyHead"/>
 
