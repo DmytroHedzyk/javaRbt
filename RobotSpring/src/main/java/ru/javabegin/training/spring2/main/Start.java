@@ -6,7 +6,7 @@ import ru.javabegin.training.spring2.impls.robot.ModelT1000;
 
 public class Start {
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring2/all_context.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("all_context.xml");
 		ModelT1000 t1000 = (ModelT1000) context.getBean("t1000");
 		t1000.action();
 
