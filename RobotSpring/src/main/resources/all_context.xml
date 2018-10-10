@@ -5,4 +5,6 @@
 
     <import resource="t1000_context.xml"/>
 
+    <bean class="ru.javabegin.training.spring2.main.MyBeanPostProcessor"/>
+
 </beans>
