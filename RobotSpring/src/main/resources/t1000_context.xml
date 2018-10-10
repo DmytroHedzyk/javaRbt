@@ -18,7 +18,7 @@
 
     </bean>
 
-    <bean id="baseModel">
+    <bean id="baseModel" abstract="true">
         <constructor-arg ref="sonyHand" index="0"/>
         <constructor-arg ref="sonyLeg" index="1"/>
         <constructor-arg ref="sonyHead" index="2"/>
