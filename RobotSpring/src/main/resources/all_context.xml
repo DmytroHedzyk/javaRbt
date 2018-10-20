@@ -11,4 +11,10 @@
         <lookup-method name="createRobot" bean="t1000"/>
     </bean>
 
+    <bean id="t1000Replaced" class="ru.javabegin.training.spring2.impls.robot.ModelT1000" parent="t1000">
+        <replaced-method name="action" replacer="t1000Replacer"/>
+    </bean>
+
+    <bean id="t1000Replacer" class="ru.javabegin.training.spring2.impls.robot.ModelT1000Replacer"/>
+
 </beans>
