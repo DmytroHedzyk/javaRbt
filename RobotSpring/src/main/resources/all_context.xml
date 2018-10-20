@@ -39,6 +39,14 @@
             <map>
                 <entry key="2007" value-ref="t1000"/>
                 <entry key="2008" value-ref="t1000Replaced"/>
+
+                <entry key="2009">
+                    <bean class="ru.javabegin.training.spring2.impls.robot.ModelT1000" parent="baseModel">
+                        <constructor-arg value="gold" index="3" type="java.lang.String"/>
+                        <constructor-arg value="2007" index="4" type="int"/>
+                        <constructor-arg value="false" index="5" type="boolean"/>
+                    </bean>
+                </entry>
             </map>
         </constructor-arg>
     </bean>
