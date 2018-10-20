@@ -11,7 +11,7 @@
     <import resource="toshiba_context.xml"/>
 
     <bean id="t1000" class="ru.javabegin.training.spring2.impls.robot.ModelT1000"
-          parent="baseModel">
+          parent="baseModel" scope="prototype">
         <constructor-arg index="3" value="silver" type="java.lang.String"/>
         <constructor-arg index="4" value="2005" type="int"/>
         <constructor-arg index="5" value="true" type="boolean"/>

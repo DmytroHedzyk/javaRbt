@@ -7,4 +7,8 @@
 
     <bean class="ru.javabegin.training.spring2.main.MyBeanPostProcessor"/>
 
+    <bean id="t1000Conveyor" class="ru.javabegin.training.spring2.impls.conveyor.T1000Conveyor">
+        <lookup-method name="createRobot" bean="t1000"/>
+    </bean>
+
 </beans>
