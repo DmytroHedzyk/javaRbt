@@ -2,6 +2,7 @@ package ru.javabegin.training.spring2.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.javabegin.training.spring2.impls.pool.T1000Map;
 import ru.javabegin.training.spring2.impls.pool.T1000Pool;
 import ru.javabegin.training.spring2.impls.robot.ModelT1000;
 import ru.javabegin.training.spring2.interfaces.RobotConveyor;
@@ -26,6 +27,9 @@ public class Start {
 
 		T1000Pool t1000Pool = (T1000Pool) context.getBean("t1000Pool");
 		t1000Pool.action();
+
+		T1000Map t1000Map = (T1000Map) context.getBean("t1000Map");
+		t1000Map.action();
 
 	}
 }

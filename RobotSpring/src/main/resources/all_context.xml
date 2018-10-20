@@ -34,4 +34,13 @@
         </property>
     </bean>
 
+    <bean id="t1000Map" class="ru.javabegin.training.spring2.impls.pool.T1000Map">
+        <constructor-arg name="robotMap">
+            <map>
+                <entry key="2007" value-ref="t1000"/>
+                <entry key="2008" value-ref="t1000Replaced"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
 </beans>
