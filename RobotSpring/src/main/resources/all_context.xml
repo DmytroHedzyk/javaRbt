@@ -30,6 +30,13 @@
                     <constructor-arg value="false" index="5" type="boolean"/>
                 </bean>
 
+                <bean class="ru.javabegin.training.spring2.impls.robot.ModelT1000" parent="baseModel"
+                      scope="prototype">
+                    <constructor-arg value="gold" index="3" type="java.lang.String"/>
+                    <constructor-arg value="2009" index="4" type="int"/>
+                    <constructor-arg value="true" index="5" type="boolean"/>
+                </bean>
+
             </list>
         </property>
     </bean>
@@ -49,6 +56,11 @@
                 </entry>
             </map>
         </constructor-arg>
+    </bean>
+
+    <bean id="t1000GoldenPool" class="ru.javabegin.training.spring2.impls.pool.T1000Pool">
+        <constructor-arg name="robotCollection"
+                         value="#{t1000Pool.robotCollection.?[color.toUpperCase() eq 'GOLD']}"></constructor-arg>
     </bean>
 
 </beans>

@@ -9,6 +9,13 @@ public class T1000Pool implements RobotPool {
 
     private Collection<Robot> robotCollection;
 
+    public T1000Pool() {
+    }
+
+    public T1000Pool(Collection<Robot> robotCollection) {
+        this.robotCollection = robotCollection;
+    }
+
     @Override
     public Collection<Robot> getRobotCollection() {
         return robotCollection;

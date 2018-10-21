@@ -31,5 +31,9 @@ public class Start {
 		T1000Map t1000Map = (T1000Map) context.getBean("t1000Map");
 		t1000Map.action();
 
+		T1000Pool t1000GoldenPool = (T1000Pool) context.getBean("t1000GoldenPool");
+		t1000GoldenPool.action();
+        System.out.println("t1000GoldenPool has " + t1000GoldenPool.getRobotCollection().size() + " elements.");
+
 	}
 }
