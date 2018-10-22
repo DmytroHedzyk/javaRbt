@@ -8,7 +8,7 @@ import ru.javabegin.training.spring2.interfaces.Leg;
 import ru.javabegin.training.spring2.interfaces.Robot;
 
 public abstract class BaseModel implements Robot {
-    @Autowired
+    @Autowired(required = false)
     private Hand hand;
     @Autowired
     private Leg leg;
