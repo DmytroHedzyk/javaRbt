@@ -24,5 +24,7 @@
         <constructor-arg ref="sonyHead" index="2"/>
     </bean>
 
+    <bean id="t1000Autowire" class="ru.javabegin.training.spring2.impls.robot.ModelT1000" autowire="byType"/>
+
 
 </beans>

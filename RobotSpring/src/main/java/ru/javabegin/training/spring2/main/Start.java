@@ -18,7 +18,7 @@ public class Start {
 		ModelT1000 t10001 = (ModelT1000) robotConveyor.createRobot();
 		ModelT1000 t10002 = (ModelT1000) robotConveyor.createRobot();
 
-		System.out.println(t1000);
+		System.out.println(t10000);
 		System.out.println(t10001);
 		System.out.println(t10002);
 
@@ -34,6 +34,10 @@ public class Start {
 		T1000Pool t1000GoldenPool = (T1000Pool) context.getBean("t1000GoldenPool");
 		t1000GoldenPool.action();
         System.out.println("t1000GoldenPool has " + t1000GoldenPool.getRobotCollection().size() + " elements.");
+
+        ModelT1000 t1000Autowire = (ModelT1000) context.getBean("t1000Autowire");
+        if (t1000Autowire != null) System.out.println("T1000 Autowire OK.");
+        else System.out.println("T1000 Autowire NOT GOOD");
 
 	}
 }
