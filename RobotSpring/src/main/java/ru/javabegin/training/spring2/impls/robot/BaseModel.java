@@ -1,18 +1,24 @@
 package ru.javabegin.training.spring2.impls.robot;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Qualifier;
 import ru.javabegin.training.spring2.interfaces.Hand;
 import ru.javabegin.training.spring2.interfaces.Head;
 import ru.javabegin.training.spring2.interfaces.Leg;
 import ru.javabegin.training.spring2.interfaces.Robot;
 
 public abstract class BaseModel implements Robot {
+
     @Autowired(required = false)
+    @Qualifier("toshibaHand")
     private Hand hand;
+
     @Autowired
+    @Qualifier("sonyLeg")
     private Leg leg;
+
     @Autowired
+    @Qualifier("toshibaHead")
     private Head head;
 
     public BaseModel() {
