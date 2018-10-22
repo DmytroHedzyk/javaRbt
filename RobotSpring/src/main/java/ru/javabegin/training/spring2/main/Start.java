@@ -10,7 +10,7 @@ import ru.javabegin.training.spring2.interfaces.RobotConveyor;
 public class Start {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("all_context.xml");
-		ModelT1000 t1000 = (ModelT1000) context.getBean("t1000");
+		/*ModelT1000 t1000 = (ModelT1000) context.getBean("t1000");
 		t1000.action();
 
 		RobotConveyor robotConveyor = (RobotConveyor) context.getBean("t1000Conveyor");
@@ -23,21 +23,24 @@ public class Start {
 		System.out.println(t10002);
 
 		ModelT1000 t1000Replaced = (ModelT1000) context.getBean("t1000Replaced");
-		t1000Replaced.action();
+		t1000Replaced.action();*/
 
 		T1000Pool t1000Pool = (T1000Pool) context.getBean("t1000Pool");
 		t1000Pool.action();
+		System.out.println(t1000Pool.getRobotCollection().size());
 
-		T1000Map t1000Map = (T1000Map) context.getBean("t1000Map");
-		t1000Map.action();
+/*		T1000Map t1000Map = (T1000Map) context.getBean("t1000Map");
+		t1000Map.action();*/
 
-		T1000Pool t1000GoldenPool = (T1000Pool) context.getBean("t1000GoldenPool");
+/*		T1000Pool t1000GoldenPool = (T1000Pool) context.getBean("t1000GoldenPool");
 		t1000GoldenPool.action();
-        System.out.println("t1000GoldenPool has " + t1000GoldenPool.getRobotCollection().size() + " elements.");
+        System.out.println("t1000GoldenPool has " + t1000GoldenPool.getRobotCollection().size() + " elements.");*/
 
-        ModelT1000 t1000Autowire = (ModelT1000) context.getBean("t1000Autowire");
+/*        ModelT1000 t1000Autowire = (ModelT1000) context.getBean("t1000Autowire");
         if (t1000Autowire != null) System.out.println("T1000 Autowire OK.");
-        else System.out.println("T1000 Autowire NOT GOOD");
+        else System.out.println("T1000 Autowire NOT GOOD");*/
+
+
 
 	}
 }
