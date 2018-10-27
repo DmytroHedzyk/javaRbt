@@ -2,10 +2,15 @@ package ru.javabegin.training.spring2.impls.robot;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import ru.javabegin.training.spring2.interfaces.Robot;
 import ru.javabegin.training.spring2.interfaces.Hand;
 import ru.javabegin.training.spring2.interfaces.Head;
 import ru.javabegin.training.spring2.interfaces.Leg;
+
+@Component
 
 public class ModelT1000 extends BaseModel implements InitializingBean, DisposableBean {
 
@@ -14,6 +19,12 @@ public class ModelT1000 extends BaseModel implements InitializingBean, Disposabl
 	private int year;
 	private boolean soundEnabled;
 
+	@Autowired
+	private Hand hand;
+	@Autowired
+	private Head head;
+	@Autowired
+	private Leg leg;
 
 	public ModelT1000() {
 	}
@@ -31,7 +42,37 @@ public class ModelT1000 extends BaseModel implements InitializingBean, Disposabl
         this.soundEnabled = soundEnabled;
     }
 
-    public String getColor() {
+	@Override
+	public Hand getHand() {
+		return hand;
+	}
+
+	@Override
+	public void setHand(Hand hand) {
+		this.hand = hand;
+	}
+
+	@Override
+	public Head getHead() {
+		return head;
+	}
+
+	@Override
+	public void setHead(Head head) {
+		this.head = head;
+	}
+
+	@Override
+	public Leg getLeg() {
+		return leg;
+	}
+
+	@Override
+	public void setLeg(Leg leg) {
+		this.leg = leg;
+	}
+
+	public String getColor() {
 		return color;
 	}
 
