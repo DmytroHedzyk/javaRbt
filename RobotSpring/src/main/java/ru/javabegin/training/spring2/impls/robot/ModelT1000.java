@@ -4,6 +4,9 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import ru.javabegin.training.spring2.interfaces.Robot;
 import ru.javabegin.training.spring2.interfaces.Hand;
@@ -11,7 +14,6 @@ import ru.javabegin.training.spring2.interfaces.Head;
 import ru.javabegin.training.spring2.interfaces.Leg;
 
 @Component
-
 public class ModelT1000 extends BaseModel implements InitializingBean, DisposableBean {
 
 
@@ -41,6 +43,12 @@ public class ModelT1000 extends BaseModel implements InitializingBean, Disposabl
         this.year = year;
         this.soundEnabled = soundEnabled;
     }
+
+    @Bean
+	@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public ModelT1000 model1(){
+		return new ModelT1000();
+	}
 
 	@Override
 	public Hand getHand() {
