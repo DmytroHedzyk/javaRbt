@@ -13,7 +13,7 @@ import ru.javabegin.training.spring2.interfaces.Hand;
 import ru.javabegin.training.spring2.interfaces.Head;
 import ru.javabegin.training.spring2.interfaces.Leg;
 
-@Component
+
 public class ModelT1000 extends BaseModel implements InitializingBean, DisposableBean {
 
 
@@ -21,11 +21,8 @@ public class ModelT1000 extends BaseModel implements InitializingBean, Disposabl
 	private int year;
 	private boolean soundEnabled;
 
-	@Autowired
 	private Hand hand;
-	@Autowired
 	private Head head;
-	@Autowired
 	private Leg leg;
 
 	public ModelT1000() {
@@ -44,9 +41,11 @@ public class ModelT1000 extends BaseModel implements InitializingBean, Disposabl
         this.soundEnabled = soundEnabled;
     }
 
-    @Bean
-	@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public ModelT1000 model1(){
+	public ModelT1000(Hand hand, Leg leg, Head head) {
+		super(hand, leg, head);
+	}
+
+	public ModelT1000 model1(){
 		return new ModelT1000();
 	}
 

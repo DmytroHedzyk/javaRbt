@@ -9,7 +9,7 @@ public class Start {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("all_context.xml");
 
-        ModelT1000 t1000 = (ModelT1000) context.getBean("modelT1000");
+        ModelT1000 t1000 = (ModelT1000) context.getBean("t1000A1");
         t1000.action();
 	}
 }
